@@ -29,7 +29,7 @@ namespace CasetaDialogTag
                 case DialogResult.None:
                     break;
                 case DialogResult.OK:
-                    CasetaDialog.AfiseazaMesaj("ia de aici", "nu vreau");
+                    CasetaDialog.AfiseazaMesaj("ia de aici", "nu vreau",CasetaDialog.ButonMesaj.Ok);
                     break;
                 case DialogResult.Cancel:
                     MessageBox.Show("ai selectat Anuleaza");

@@ -212,6 +212,15 @@ namespace CasetaDialogTag
             }
 
         }
+        public static System.Windows.Forms.DialogResult AfiseazaMesaj(string DialogTitlu, string DialogMesaj, ButonMesaj DialogButon, IconitaMesaj DialogIconita)
+        {
+            using (CasetaDialog casetaDialog = new CasetaDialog(DialogTitlu, DialogMesaj, DialogButon, DialogIconita))
+            {
+                casetaDialog.ShowDialog();
+                return casetaDialog.DialogResult;
+            }
+
+        }
 
         public static System.Windows.Forms.DialogResult AfiseazaMesaj(string DialogTitlu, string DialogMesaj, ButonMesaj DialogButon1, ButonMesaj DialogButon2, IconitaMesaj DialogIconita)
         {
