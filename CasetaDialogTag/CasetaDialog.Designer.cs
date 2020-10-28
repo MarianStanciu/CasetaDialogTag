@@ -40,20 +40,21 @@
             // 
             // BoxIconitaMesaj
             // 
-            this.BoxIconitaMesaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BoxIconitaMesaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BoxIconitaMesaj.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.BoxIconitaMesaj.Location = new System.Drawing.Point(12, 7);
             this.BoxIconitaMesaj.Name = "BoxIconitaMesaj";
-            this.BoxIconitaMesaj.Size = new System.Drawing.Size(57, 53);
+            this.BoxIconitaMesaj.Size = new System.Drawing.Size(67, 66);
+            this.BoxIconitaMesaj.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BoxIconitaMesaj.TabIndex = 12;
             this.BoxIconitaMesaj.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(12, 66);
+            this.panel1.Location = new System.Drawing.Point(12, 79);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 3);
+            this.panel1.Size = new System.Drawing.Size(560, 20);
             this.panel1.TabIndex = 11;
             // 
             // btnSecundar

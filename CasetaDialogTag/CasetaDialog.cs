@@ -20,9 +20,6 @@ namespace CasetaDialogTag
         ButonMesaj butonMesaj3;
         IconitaMesaj iconitaMesaj;
 
-
-
-
         public enum IconitaMesaj
         {
             Niciuna,
@@ -44,17 +41,7 @@ namespace CasetaDialogTag
             Nu
 
         }
-        public CasetaDialog(string Titlu, string Mesaj, ButonMesaj Buton_Mesaj1, IconitaMesaj niciuna)
-        {
-            InitializeComponent();
-            titlu = Titlu;
-            butonMesaj1 = Buton_Mesaj1;
-            btnSecundar.Visible = false;
-            btnFinal.Visible = false;
-            mesaj = Mesaj;
-
-
-        }
+      
 
         private void CasetaDialog_Load(object sender, EventArgs e)
         {
@@ -84,6 +71,7 @@ namespace CasetaDialogTag
             switch (butonMesaj1)
             {
                 case ButonMesaj.Nimic:
+                    btnPrimar.Visible = false;
                     break;
                 case ButonMesaj.Ok:
                     btnPrimar.Text = "OK";
@@ -110,6 +98,7 @@ namespace CasetaDialogTag
             switch (butonMesaj2)
             {
                 case ButonMesaj.Nimic:
+                    btnSecundar.Visible = false;
                     break;
                 case ButonMesaj.Ok:
                     btnSecundar.Text = "OK";
@@ -136,6 +125,7 @@ namespace CasetaDialogTag
             switch (butonMesaj3)
             {
                 case ButonMesaj.Nimic:
+                    btnFinal.Visible = false;
                     break;
                 case ButonMesaj.Ok:
                     btnFinal.Text = "OK";
@@ -166,6 +156,33 @@ namespace CasetaDialogTag
 
 
         }
+        public CasetaDialog(string Titlu)
+        {
+            InitializeComponent();
+            titlu = Titlu;
+            btnPrimar.Text = "OK";
+            btnSecundar.Visible = false;
+            btnFinal.Visible = false;
+        }
+
+        public CasetaDialog(string Titlu, ButonMesaj Buton_Mesaj1, IconitaMesaj niciuna)
+        {
+            InitializeComponent();
+            titlu = Titlu;
+            butonMesaj1 = Buton_Mesaj1;
+            btnSecundar.Visible = false;
+            btnFinal.Visible = false;          
+        }
+        public CasetaDialog(string Titlu, string Mesaj, ButonMesaj Buton_Mesaj1, IconitaMesaj niciuna)
+        {
+            InitializeComponent();
+            titlu = Titlu;
+            butonMesaj1 = Buton_Mesaj1;
+            btnSecundar.Visible = false;
+            btnFinal.Visible = false;
+            mesaj = Mesaj;
+
+        }
         public CasetaDialog(string Titlu, string Mesaj, ButonMesaj Buton_Mesaj1, ButonMesaj Buton_Mesaj2, IconitaMesaj Iconita_Mesaj)
         {
             InitializeComponent();
@@ -186,7 +203,17 @@ namespace CasetaDialogTag
             butonMesaj2 = Buton_Mesaj2;
             butonMesaj3 = Buton_Mesaj3;
             iconitaMesaj = Iconita_Mesaj;
-        }     
+        }
+
+        public static System.Windows.Forms.DialogResult AfiseazaMesaj(string DialogTitlu )
+        {
+            using (CasetaDialog casetaDialog = new CasetaDialog(DialogTitlu,  ButonMesaj.Ok, IconitaMesaj.Niciuna))
+            {
+                casetaDialog.ShowDialog();
+                return casetaDialog.DialogResult;
+            }
+
+        }
 
         public static System.Windows.Forms.DialogResult AfiseazaMesaj(string DialogTitlu, string DialogMesaj)
         {

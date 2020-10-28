@@ -23,7 +23,7 @@ namespace CasetaDialogTag
         }
         private void AfiseazaMesaj()
         {
-            DialogResult res = CasetaDialog.AfiseazaMesaj("Marian stanciu", "afisare proba", CasetaDialog.ButonMesaj.Ok,  CasetaDialog.ButonMesaj.Anuleaza, CasetaDialog.IconitaMesaj.Intrebare);
+            DialogResult res = CasetaDialog.AfiseazaMesaj("Marian stanciu", "afisare proba", CasetaDialog.ButonMesaj.Ok,  CasetaDialog.ButonMesaj.Nimic,CasetaDialog.ButonMesaj.Anuleaza, CasetaDialog.IconitaMesaj.Informare);
             switch (res)
             {
                 case DialogResult.None:
@@ -32,7 +32,7 @@ namespace CasetaDialogTag
                     CasetaDialog.AfiseazaMesaj("ia de aici", "nu vreau",CasetaDialog.ButonMesaj.Ok);
                     break;
                 case DialogResult.Cancel:
-                    MessageBox.Show("ai selectat Anuleaza");
+                    CasetaDialog.AfiseazaMesaj("ai selectat Anuleaza");
                     break;
                 case DialogResult.Abort:
                     MessageBox.Show("ai selectat Abort");
