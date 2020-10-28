@@ -214,7 +214,6 @@ namespace CasetaDialogTag
             }
 
         }
-
         public static System.Windows.Forms.DialogResult AfiseazaMesaj(string DialogTitlu, string DialogMesaj)
         {
             using (CasetaDialog casetaDialog = new CasetaDialog(DialogTitlu, DialogMesaj, ButonMesaj.Ok, IconitaMesaj.Niciuna))

@@ -19,11 +19,14 @@ namespace CasetaDialogTag
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AfiseazaMesaj();
+          //  AfiseazaMesaj();
+           CasetaDialog.AfiseazaMesaj("Adrian", "Afisare Adrian",CasetaDialog.ButonMesaj.Ok, CasetaDialog.ButonMesaj.Nimic, CasetaDialog.ButonMesaj.Anuleaza, CasetaDialog.IconitaMesaj.Eroare);
         }
+
+
         private void AfiseazaMesaj()
         {
-            DialogResult res = CasetaDialog.AfiseazaMesaj("Marian stanciu", "afisare proba", CasetaDialog.ButonMesaj.Ok,  CasetaDialog.ButonMesaj.Nimic,CasetaDialog.ButonMesaj.Anuleaza, CasetaDialog.IconitaMesaj.Informare);
+            DialogResult res = CasetaDialog.AfiseazaMesaj("Marian stanciu", "afisare proba", CasetaDialog.ButonMesaj.Ok,  CasetaDialog.ButonMesaj.Reincearca,CasetaDialog.ButonMesaj.Anuleaza, CasetaDialog.IconitaMesaj.Informare);
             switch (res)
             {
                 case DialogResult.None:
@@ -38,7 +41,7 @@ namespace CasetaDialogTag
                     MessageBox.Show("ai selectat Abort");
                     break;
                 case DialogResult.Retry:
-                    MessageBox.Show("ai selectat Retry");
+                    MessageBox.Show("ai selectat Reincearca");
                     break;
                 case DialogResult.Ignore:
                     MessageBox.Show("ai selectat Ignora");
